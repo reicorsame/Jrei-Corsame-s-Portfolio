@@ -1,0 +1,147 @@
+body{
+    font-family: Arial;
+    margin:0;
+    background:#000000;
+    color:white;
+}
+
+/* NAVBAR */
+nav{
+    background:#111;
+    padding:15px;
+    text-align:center;
+    box-shadow:0 2px 8px rgba(0,0,0,0.5);
+}
+
+nav a{
+    color:white;
+    margin:12px;
+    text-decoration:none;
+    font-size:18px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:rgb(0, 247, 255);
+}
+
+/* HOME PAGE HERO */
+.hero{
+    text-align:center;
+    padding:80px 20px;
+}
+
+.hero h2{
+    color:rgb(0, 247, 255);
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:18px;
+    color:#ffffff;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:rgb(0, 247, 255);
+    color:black;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:white;
+}
+
+/* CONTAINER */
+.container{
+    padding:30px;
+}
+
+/* ABOUT SECTION */
+.about-home,
+.about{
+    text-align:center;
+    background:white;
+    color:black;
+    padding:20px;
+    margin-bottom:25px;
+    border-radius:12px;
+}
+
+/* FEATURED EPISODES */
+.featured{
+    text-align:center;
+    padding:20px;
+}
+
+.featured h2{
+    color:rgb(0, 247, 255);
+}
+
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:#ffffff;
+    color:black;
+    padding:15px;
+    border-radius:10px;
+    width:220px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    background:rgb(0, 247, 255);
+}
+
+.card img{
+    width:100%;
+    border-radius:10px;
+}
+.comic a{
+    text-decoration:none;
+    color:#000000;
+    display:block;
+}
+
+
+/* SERIES PAGE */
+.comic{
+    background:#ffffff;
+    color:black;
+    padding:15px;
+    margin-bottom:20px;
+    border-radius:10px;
+    box-shadow:0 0 5px #000000;
+    transition:0.3s;
+}
+
+.comic:hover{
+    transform:scale(1.01);
+    background:#00f7ff;
+}
+
+.comic img{
+    width:100%;
+    border-radius:10px;
+}
+
+/* FOOTER */
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:20px;
+}
