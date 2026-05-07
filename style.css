@@ -162,9 +162,16 @@ gap:16px;
 margin-top:20px;
 width:100%;
 }
-
-.grid > .card:nth-last-child(1){
-grid-column: 2;
+.grid{
+grid-auto-flow: row;
+justify-content: center;
+}
+.grid > .card{
+justify-self: center;
+}
+.grid .card:last-child{
+grid-column-start: 2;
+grid-column-end: 3;
 }
 
 /* CARD IMAGES */
