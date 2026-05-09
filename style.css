@@ -11,7 +11,8 @@ color:#e5e7eb;
 line-height:1.6;
 opacity:0;
 animation:fadeIn 0.6s ease forwards;
-padding-top:80px; /* FIX: prevents navbar overlap */
+padding-top:80px;
+transition:background 0.3s,color 0.3s;
 }
 
 /* NAVBAR */
@@ -80,7 +81,8 @@ font-size:30px;
 animation:fadeUp 0.8s ease both;
 }
 
-h3,p{
+h3,
+p{
 color:#94a3b8;
 font-size:15px;
 animation:fadeUp 1s ease both;
@@ -157,21 +159,21 @@ border-color:rgba(56,189,248,0.4);
 /* GRID */
 .grid{
 display:grid;
-grid-template-columns:repeat(3, 1fr);
+grid-template-columns:repeat(3,1fr);
 gap:16px;
 margin-top:20px;
 width:100%;
+grid-auto-flow:row;
+justify-content:center;
 }
-.grid{
-grid-auto-flow: row;
-justify-content: center;
-}
+
 .grid > .card{
-justify-self: center;
+justify-self:center;
 }
+
 .grid .card:last-child{
-grid-column-start: 2;
-grid-column-end: 3;
+grid-column-start:2;
+grid-column-end:3;
 }
 
 /* CARD IMAGES */
@@ -252,14 +254,14 @@ transform:translateY(0);
 }
 
 /* TABLET */
-@media (max-width: 1024px){
+@media (max-width:1024px){
 .grid{
-grid-template-columns:repeat(2, 1fr);
+grid-template-columns:repeat(2,1fr);
 }
 }
 
 /* MOBILE */
-@media (max-width: 768px){
+@media (max-width:768px){
 
 nav{
 flex-direction:row;
@@ -291,21 +293,65 @@ padding:40px 16px;
 }
 
 .center-last{
-grid-column: 1;
-justify-self: center;
+grid-column:1;
+justify-self:center;
 }
-
-@media (max-width: 768px){
 
 h3{
 text-align:center;
 }
-}
 
-@media (max-width: 768px){
 .grid > .card:nth-last-child(1){
-grid-column: auto;
-}
+grid-column:auto;
 }
 
+}
+
+/* LIGHT MODE */
+body.light-mode{
+background:#f8fafc;
+color:#0f172a;
+}
+
+/* ALL TEXT */
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode p,
+body.light-mode a{
+color:#0f172a;
+}
+
+/* NAVBAR */
+body.light-mode nav{
+background:rgba(255,255,255,0.85);
+border-bottom:1px solid rgba(0,0,0,0.08);
+}
+
+body.light-mode nav a{
+color:#0f172a;
+}
+
+body.light-mode nav b{
+color:#0ea5e9;
+}
+
+/* CARDS */
+body.light-mode .card{
+background:#ffffff;
+border:1px solid rgba(0,0,0,0.08);
+box-shadow:0 6px 20px rgba(0,0,0,0.08);
+}
+
+/* INPUTS */
+body.light-mode input,
+body.light-mode textarea{
+background:#ffffff;
+color:#0f172a;
+border:1px solid rgba(0,0,0,0.15);
+}
+
+/* HERO TEXT OVERRIDE (important) */
+body.light-mode .hero span{
+color:#0ea5e9;
 }

@@ -15,6 +15,8 @@
 <a href="Services.html">Services</a>
 <a href="contact.html">Contact</a>
 </div>
+
+<button id="themeToggle">☀️</button>
 </nav>
   
 <section>
@@ -42,7 +44,7 @@ that are simple but visually appealing.
 
 <section>
 
-<h1>My Achievements</h1>
+<h1>My Achievements / Experience</h1>
 
 <div class="grid">
 
@@ -72,19 +74,50 @@ that are simple but visually appealing.
 <div class="card">
 <h3>1st Year College</h3>
 <p>
-• Currently studying Computer Science<br>
-• Learning HTML, CSS, JavaScript and Python<br>
+• Expanding Knowledge of HTML, CSS, JavaScript and Python<br>
 • 1st Semester Capstone Project: Prototype Arduino RFID Door Lock<br>
 • Building personal portfolio projects<br>
-• Improving UI/UX and digital design skills<br>
 • Doing digital art commissions<br>
 • Part-time on-call event coordinator for local events
+</p>
+</div>
+
+<div class="card">
+<h3>Work Achievements</h3>
+<p>
+•     <br>
+•     <br>
 </p>
 </div>
 
 </div>
 
 </section>
+
+<script>
+const toggle = document.getElementById("themeToggle");
+
+/* LOAD SAVED THEME */
+if(localStorage.getItem("theme") === "light"){
+document.body.classList.add("light-mode");
+toggle.textContent = "🌙";
+}
+
+/* TOGGLE THEME */
+toggle.onclick = () => {
+
+document.body.classList.toggle("light-mode");
+
+if(document.body.classList.contains("light-mode")){
+localStorage.setItem("theme","light");
+toggle.textContent = "🌙";
+}else{
+localStorage.setItem("theme","dark");
+toggle.textContent = "☀️";
+}
+
+};
+</script>
 
 </body>
 </html>
