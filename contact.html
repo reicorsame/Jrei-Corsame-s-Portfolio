@@ -22,7 +22,6 @@
 
 <section>
 
-<h1>Contact Me</h1>
 
 <div class="contact-container">
 
@@ -69,6 +68,16 @@
 
 </section>
 
+<footer class="footer">
+  <div class="footer-content">
+    <h3>JREI Portfolio</h3>
+    <p>Building clean, modern web projects.</p>
+
+    <p class="footer-bottom">© 2026 JREI. All rights reserved.</p>
+  </div>
+</footer>
+
+
 <script>
 const toggle = document.getElementById("themeToggle");
 
@@ -92,6 +101,15 @@ toggle.textContent = "☀️";
 }
 
 };
+
+
+const form = document.querySelector("form");
+
+form.addEventListener("submit", function () {
+    setTimeout(() => {
+        form.reset();
+    }, 100);
+});
 </script>
 
 </body>
