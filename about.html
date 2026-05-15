@@ -1,123 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">   
-<title>About</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn more about Jrei — CS student, digital artist, and event coordinator.">
+  <title>About | Jrei</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <nav>
-<b>JREI</b>
-<div>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="Services.html">Services</a>
-<a href="contact.html">Contact</a>
-</div>
-
-<button id="themeToggle">☀️</button>
+  <b>JREI</b>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="Services.html">Services</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <button id="themeToggle" aria-label="Toggle light/dark mode">☀️</button>
 </nav>
-  
+
 <section>
+  <h1>About Me</h1>
 
-<h1>About Me</h1>
+  <div class="card">
+    <p>
+      Hi! I'm Jrei, a Computer Science student passionate about web development,
+      digital art, and creative design. I enjoy building clean and modern websites
+      that are simple but visually appealing.
+    </p>
+  </div>
 
-<div class="card">
-<p>
-Hi! I’m Jrei, a Computer Science student passionate about web development,
-digital art, and creative design. I enjoy building clean and modern websites
-that are simple but visually appealing.
-</p>
-</div>
+  <h1>What I Do</h1>
 
-<h1>What I Do</h1>
-
-<div class="card">
-<p>
-• Web Development (HTML, CSS, JavaScript, and Python) <br>
-• Digital Art & Design <br>
-• UI Layout Design <br>
-• On-call coordination and organization tasks
-</p>
-</div>
+  <div class="card">
+    <p>• Web Development (HTML, CSS, JavaScript, and Python)</p>
+    <p>• Digital Art &amp; Design</p>
+    <p>• UI Layout Design</p>
+    <p>• On-call coordination and organization tasks</p>
+  </div>
 </section>
 
-
 <section>
+  <h1>My Achievements / Experience</h1>
 
-<h1>My Achievements / Experience</h1>
+  <div class="grid">
 
-<div class="grid">
+    <div class="card">
+      <h3>Grade 11</h3>
+      <p>• Senior High School (ICT Track)</p>
+      <p>• With Honor — 1st &amp; 2nd Semesters</p>
+      <p>• Joined school tech-related activities</p>
+      <p>• Event Coordination for school events</p>
+      <p>• 1st Place in Digital Art Contest</p>
+    </div>
 
-<div class="card">
-<h3>Grade 11</h3>
-<p>
-• Senior High School (ICT Track)<br>
-• With Honor 1st-2nd Semesters<br>
-• Joined school tech-related activities<br>
-• Joined Event Coordination for school events<br>
-• 1st Place in Digital Art Contest<br>
-</p>
-</div>
+    <div class="card">
+      <h3>Grade 12</h3>
+      <p>• Completed Senior High School</p>
+      <p>• With Highest Honor — 1st &amp; 2nd Semesters</p>
+      <p>• Created personal mini-projects (portfolio &amp; designs)</p>
+      <p>• Became Event Coordinator for school events</p>
+    </div>
 
-<div class="card">
-<h3>Grade 12</h3>
-<p>
-• Completed Senior High School<br>
-• With Highest Honor 1st-2nd Semesters<br>
-• Created personal mini-projects (portfolio & designs)<br>
-• Became Event Coordinator for school events<br>
-</p>
-</div>
+    <div class="card">
+      <h3>1st Year College</h3>
+      <p>• Expanding knowledge of HTML, CSS, JavaScript, and Python</p>
+      <p>• Capstone Project: Prototype Arduino RFID Door Lock</p>
+      <p>• Building personal portfolio projects</p>
+    </div>
 
-<div class="card">
-<h3>1st Year College</h3>
-<p>
-• Expanding Knowledge of HTML, CSS, JavaScript and Python<br>
-• 1st Semester Capstone Project: Prototype Arduino RFID Door Lock<br>
-• Building personal portfolio projects<br>
-</p>
-</div>
-
-</div>
-
+  </div>
 </section>
 
 <footer class="footer">
   <div class="footer-content">
     <h3>JREI Portfolio</h3>
     <p>Building clean, modern web projects.</p>
-
     <p class="footer-bottom">© 2026 JREI. All rights reserved.</p>
   </div>
 </footer>
 
-<script>
-const toggle = document.getElementById("themeToggle");
-
-/* LOAD SAVED THEME */
-if(localStorage.getItem("theme") === "light"){
-document.body.classList.add("light-mode");
-toggle.textContent = "🌙";
-}
-
-/* TOGGLE THEME */
-toggle.onclick = () => {
-
-document.body.classList.toggle("light-mode");
-
-if(document.body.classList.contains("light-mode")){
-localStorage.setItem("theme","light");
-toggle.textContent = "🌙";
-}else{
-localStorage.setItem("theme","dark");
-toggle.textContent = "☀️";
-}
-
-};
-</script>
-
+<script src="theme.js"></script>
 </body>
 </html>
-
