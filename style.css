@@ -220,6 +220,7 @@ img.profile-pic {
 
 /* ── CARDS ── */
 .card {
+  
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
   padding: 20px;
@@ -666,6 +667,11 @@ body.light-mode .footer-content p  { color: #475569; }
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+.card:last-child {
+  grid-column: 1 / -1;
+  justify-self: center;
 }
 
 @media (max-width: 768px) {
