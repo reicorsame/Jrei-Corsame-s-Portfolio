@@ -131,6 +131,41 @@ p {
   justify-content: center;
   text-align: center;
   gap: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hero Image Background */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: blur(3px) brightness(0.3) saturate(0.8);
+  transform: scale(1.05);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at center, rgba(11,15,26,0.35) 0%, rgba(11,15,26,0.82) 100%),
+    linear-gradient(to bottom, rgba(11,15,26,0.6) 0%, transparent 40%, transparent 60%, rgba(11,15,26,0.7) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero > *:not(.hero-bg) {
+  position: relative;
+  z-index: 2;
 }
 
 .hero h1 {
@@ -217,6 +252,211 @@ img.profile-pic {
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   margin-top: 20px;
+}
+
+/* ── SECTION SUBTITLE ── */
+.section-sub {
+  color: #64748b;
+  font-size: 14px;
+  margin-bottom: 4px;
+  text-align: center;
+  animation: none;
+}
+
+/* ── GALLERY GRID ── */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 16px;
+}
+
+/* ── GALLERY CARD ── */
+.gallery-card {
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: default;
+  position: relative;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+}
+
+.gallery-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(56, 189, 248, 0.35);
+  box-shadow: 0 12px 32px rgba(56, 189, 248, 0.12);
+}
+
+.gallery-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.04);
+}
+
+.gallery-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 8px 12px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.65), transparent);
+  color: #e5e7eb;
+  font-size: 13px;
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.gallery-card:hover .gallery-label {
+  opacity: 1;
+}
+
+/* ── WEBSITE GALLERY CARD ── */
+.website-card img {
+  aspect-ratio: 16 / 9;
+}
+
+/* ── RESUME ── */
+.resume-section{
+text-align:center;
+}
+
+.resume-image{
+width:100%;
+max-width:500px;
+border-radius:20px;
+cursor:pointer;
+transition:0.4s;
+box-shadow:0 6px 20px rgba(0, 0, 0, 0.35);
+}
+.resume-download {
+  display: inline-block;
+  margin-top: 14px;
+}
+
+.resume-image:hover{
+transform:scale(1.02);
+}
+
+.download-btn{
+display:inline-block;
+padding:14px 24px;
+background:#38bdf8;
+color:#0f172a;
+font-weight:bold;
+text-decoration:none;
+border-radius:30px;
+transition:0.3s;
+margin-top:20px;
+}
+
+.download-btn:hover{
+background:#0ea5e9;
+transform:translateY(-3px);
+}
+
+body.light-mode .download-btn{
+color:white;
+}
+
+.resume-image{
+  width: 300px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.resume-image:hover{
+  transform: scale(1.03);
+}
+/* MODALS */
+
+/* Resume Modal*/
+.modal{
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: rgba(0,0,0,0.9);
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; 
+
+  padding-bottom: 30px; 
+  box-sizing: border-box;
+}
+
+.modal-content{
+  max-width: 85%;
+  max-height: 95svh;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+/* GALLERY Modal (Home) */
+.modal{
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: rgba(0,0,0,0.9);
+
+  justify-content: center;
+}
+
+.modal.upper-mode{
+  align-items: flex bottom; 
+  padding-top: 1000px;
+}
+
+body.no-scroll{
+  overflow: hidden;
+}
+
+
+
+/* ABOUT PAGE MOBILE */
+
+@media(max-width:768px){
+
+.about-hero{
+flex-direction:column;
+text-align:center;
+padding-top:180px;
+}
+
+.profile-image{
+width:240px;
+height:240px;
+}
+
+.about-text{
+width:100%;
+}
+
+.resume-image{
+max-width:100%;
+}
+}
+
+@media (max-width: 768px){
+  .modal{
+    align-items: flex-end;
+    padding-bottom: 250px;
+  }
+
+  .modal-content{
+    max-height: 250vh;
+  }
 }
 
 /* ── FORM ── */
@@ -352,6 +592,7 @@ body.light-mode h3 { color: #1e293b; }
 body.light-mode p  { color: #475569; }
 
 body.light-mode .hero span { color: #0ea5e9; }
+body.light-mode .section-sub { color: #94a3b8; }
 
 body.light-mode .card {
   background: #ffffff;
@@ -360,6 +601,26 @@ body.light-mode .card {
 }
 
 body.light-mode .card:hover {
+  border-color: rgba(14, 165, 233, 0.4);
+  box-shadow: 0 10px 28px rgba(14, 165, 233, 0.12);
+}
+
+body.light-mode .gallery-card {
+  background: #ffffff;
+  border: 1px solid rgba(14, 165, 233, 0.15);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+}
+
+body.light-mode .gallery-card:hover {
+  border-color: rgba(14, 165, 233, 0.4);
+  box-shadow: 0 10px 28px rgba(14, 165, 233, 0.12);
+}
+
+body.light-mode .resume-img-wrap {
+  border-color: rgba(14, 165, 233, 0.15);
+}
+
+body.light-mode .resume-img-wrap:hover {
   border-color: rgba(14, 165, 233, 0.4);
   box-shadow: 0 10px 28px rgba(14, 165, 233, 0.12);
 }
@@ -401,7 +662,8 @@ body.light-mode .footer-content p  { color: #475569; }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 1020px) {
-  .grid {
+  .grid,
+  .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -426,8 +688,9 @@ body.light-mode .footer-content p  { color: #475569; }
     font-size: 34px;
   }
 
-  .grid {
-    grid-template-columns: 1fr;
+  .grid,
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   section {
@@ -447,9 +710,8 @@ body.light-mode .footer-content p  { color: #475569; }
     text-align: center;
   }
 
-  form p,
-  form label {
-    text-align: left;
+  .gallery-label {
+    opacity: 1;
   }
 
   .contact-container {
@@ -469,5 +731,11 @@ body.light-mode .footer-content p  { color: #475569; }
   img.profile-pic {
     width: 160px !important;
     height: 160px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
   }
 }

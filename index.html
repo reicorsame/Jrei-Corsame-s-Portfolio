@@ -20,8 +20,14 @@
   <button id="themeToggle" aria-label="Toggle light/dark mode">☀️</button>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
-  <img src="images/profile.jpg" class="profile-pic" alt="Photo of Jrei">
+
+  <!-- hero background image -->
+  <div class="hero-bg" aria-hidden="true">
+    <img src="images/hero-bg.jpg" alt="">
+  </div>
+
   <h1>Hello, I'm <span>Jrei</span></h1>
   <p>
     A Computer Science student with experience in digital art commissions and
@@ -34,6 +40,7 @@
   </div>
 </section>
 
+<!-- WHY WORK WITH ME -->
 <section>
   <div class="card">
     <h1>Why Work With Me?</h1>
@@ -45,31 +52,68 @@
   </div>
 </section>
 
+<!-- SKILLS -->
 <section>
   <h1>My Skills</h1>
-
   <div class="card">
     <h3>Web Development</h3>
     <p>Responsive websites using HTML, CSS, JavaScript, and Python.</p>
   </div>
-
   <div class="card">
     <h3>UI / UX Design</h3>
     <p>Simple and aesthetic layouts for modern users.</p>
   </div>
-
   <div class="card">
     <h3>Digital Art</h3>
     <p>Creative graphics, branding visuals, and custom art.</p>
   </div>
 </section>
 
+<!-- CTA -->
 <section>
   <div class="card">
     <h1>Let's Build Something Great</h1>
     <p>Need a website or creative digital help? Let's work together.</p>
     <a class="btn" href="contact.html">Contact Me</a>
   </div>
+</section>
+
+<!-- GALLERY -->
+<section>
+  <h1>My Artwork</h1>
+  <p class="section-sub">Tap any piece to enlarge · click or pinch again to zoom</p>
+
+  <div class="gallery-grid">
+    <div class="gallery-card upper-item" data-src="images/artwork1.jpg" data-label="Semi Realism">
+      <img src="images/artwork1.jpg" alt="Semi Realism artwork 1" loading="lazy">
+      <div class="gallery-label">Semi Realism</div>
+    </div>
+    <div class="gallery-card upper-item" data-src="images/artwork2.jpg" data-label="Semi Realism">
+      <img src="images/artwork2.jpg" alt="Semi Realism artwork 2" loading="lazy">
+      <div class="gallery-label">Semi Realism</div>
+    </div>
+    <div class="gallery-card upper-item" data-src="images/artwork3.jpg" data-label="Semi Realism">
+      <img src="images/artwork3.jpg" alt="Semi Realism artwork 3" loading="lazy">
+      <div class="gallery-label">Semi Realism</div>
+    </div>
+    <div class="gallery-card bottom-item" data-src="images/artwork4.jpg" data-label="Manhwa Style">
+      <img src="images/artwork4.jpg" alt="Manhwa Style artwork 1" loading="lazy">
+      <div class="gallery-label">Manhwa Style</div>
+    </div>
+    <div class="gallery-card bottom-item" data-src="images/artwork5.jpg" data-label="Manhwa Style">
+      <img src="images/artwork5.jpg" alt="Manhwa Style artwork 2" loading="lazy">
+      <div class="gallery-label">Manhwa Style</div>
+    </div>
+    <div class="gallery-card bottom-item" data-src="images/artwork6.jpg" data-label="Manhwa Style">
+      <img src="images/artwork6.jpg" alt="Manhwa Style artwork 3" loading="lazy">
+      <div class="gallery-label">Manhwa Style</div>
+    </div>
+  </div>
+
+  <div id="imageModal" class="modal">
+  <img class="modal-content" id="zoomedImage">
+</div>
+
 </section>
 
 <footer class="footer">
@@ -81,5 +125,26 @@
 </footer>
 
 <script src="theme.js"></script>
+
+<script>
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("zoomedImage");
+
+document.querySelectorAll(".gallery-card").forEach(card => {
+  card.addEventListener("click", function () {
+    modal.style.display = "flex";
+    modalImg.src = this.getAttribute("data-src");
+    document.body.classList.add("no-scroll");
+  });
+});
+
+modal.addEventListener("click", function (e) {
+  if (e.target === modal) {
+    modal.style.display = "none";
+    document.body.classList.remove("no-scroll");
+  }
+});
+</script>
+
 </body>
 </html>

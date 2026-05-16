@@ -20,9 +20,11 @@
   <button id="themeToggle" aria-label="Toggle light/dark mode">☀️</button>
 </nav>
 
+<!-- PROFILE -->
 <section>
-  <h1>About Me</h1>
+  <img src="images/profile.jpg" class="profile-pic" alt="Photo of Jrei">
 
+  <h1>About Me</h1>
   <div class="card">
     <p>
       Hi! I'm Jrei, a Computer Science student passionate about web development,
@@ -32,7 +34,6 @@
   </div>
 
   <h1>What I Do</h1>
-
   <div class="card">
     <p>• Web Development (HTML, CSS, JavaScript, and Python)</p>
     <p>• Digital Art &amp; Design</p>
@@ -41,9 +42,9 @@
   </div>
 </section>
 
+<!-- ACHIEVEMENTS -->
 <section>
   <h1>My Achievements / Experience</h1>
-
   <div class="grid">
 
     <div class="card">
@@ -73,6 +74,30 @@
   </div>
 </section>
 
+<!-- RESUME -->
+<section>
+<h1 text align="center">My Resume</h1>
+<p class="section-sub" text align="center">Click the image to view</p>
+
+
+<div class="resume-section">
+
+<img src="images/resume.jpg" alt="Resume Preview" class="resume-image" id="resumePreview">
+
+<br><br>
+
+<a href="resume.pdf" download class="download-btn">
+Download Resume
+</a>
+
+</div>
+
+<div id="imageModal" class="modal">
+  <img class="modal-content" id="zoomedImage">
+</div>
+
+</section>
+
 <footer class="footer">
   <div class="footer-content">
     <h3>JREI Portfolio</h3>
@@ -82,5 +107,33 @@
 </footer>
 
 <script src="theme.js"></script>
+
+<script>
+
+const modal = document.getElementById("imageModal");
+const img = document.getElementById("resumePreview");
+const modalImg = document.getElementById("zoomedImage");
+
+window.onload = function () {
+  modal.style.display = "none";
+  document.body.classList.remove("no-scroll");
+}
+  
+
+img.onclick = function () {
+  modal.style.display = "flex";
+  modalImg.src = this.src;
+  document.body.classList.add("no-scroll");
+}
+
+modal.onclick = function (e) {
+  if (e.target === modal) {
+    modal.style.display = "none";
+    document.body.classList.remove("no-scroll");
+  }
+}
+
+</script>
+
 </body>
 </html>

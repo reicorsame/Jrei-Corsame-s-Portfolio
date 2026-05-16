@@ -20,20 +20,18 @@
   <button id="themeToggle" aria-label="Toggle light/dark mode">☀️</button>
 </nav>
 
+<!-- SERVICES -->
 <section>
   <h1>Services</h1>
-
   <div class="grid">
     <div class="card">
       <h3>Web Development</h3>
       <p>I create simple, responsive, and user-friendly websites that are visually clean and functional across all devices.</p>
     </div>
-
     <div class="card">
       <h3>Digital Art</h3>
       <p>I produce creative commission work and illustrations, bringing ideas to life through detailed and customized artwork.</p>
     </div>
-
     <div class="card">
       <h3>Freelance</h3>
       <p>I offer flexible freelance services for various projects, ensuring quality and timely delivery.</p>
@@ -41,42 +39,57 @@
   </div>
 </section>
 
+<!-- GALLERY -->
 <section>
   <h1>My Gallery</h1>
-  <h3>Sample Artwork</h3>
+  <p class="section-sub">Tap any image to enlarge · click or pinch to zoom</p>
 
-  <div class="grid">
-
-    <div class="card">
-      <h3>Semi Realism</h3>
-      <img src="images/artwork1.jpg">
+  <div class="gallery-grid">
+    <div class="gallery-card" data-src="images/artwork1.jpg" data-label="Semi Realism">
+      <img src="images/artwork1.jpg" alt="Semi Realism artwork 1" loading="lazy">
+      <div class="gallery-label">Semi Realism</div>
     </div>
-
-    <div class="card">
-      <h3>Semi Realism</h3>
-      <img src="images/artwork2.jpg">
+    <div class="gallery-card" data-src="images/artwork2.jpg" data-label="Semi Realism">
+      <img src="images/artwork2.jpg" alt="Semi Realism artwork 2" loading="lazy">
+      <div class="gallery-label">Semi Realism</div>
     </div>
-
-    <div class="card">
-      <h3>Semi Realism</h3>
-      <img src="images/artwork3.jpg">
+    <div class="gallery-card" data-src="images/artwork3.jpg" data-label="Semi Realism">
+      <img src="images/artwork3.jpg" alt="Semi Realism artwork 3" loading="lazy">
+      <div class="gallery-label">Semi Realism</div>
     </div>
-
-    <div class="card">
-      <h3>Manhwa Style</h3>
-      <img src="images/artwork4.jpg">
+    <div class="gallery-card" data-src="images/artwork4.jpg" data-label="Manhwa Style">
+      <img src="images/artwork4.jpg" alt="Manhwa Style artwork 1" loading="lazy">
+      <div class="gallery-label">Manhwa Style</div>
     </div>
-
-    <div class="card">
-      <h3>Manhwa Style</h3>
-      <img src="images/artwork5.jpg">
+    <div class="gallery-card" data-src="images/artwork5.jpg" data-label="Manhwa Style">
+      <img src="images/artwork5.jpg" alt="Manhwa Style artwork 2" loading="lazy">
+      <div class="gallery-label">Manhwa Style</div>
     </div>
-
-    <div class="card">
-      <h3>Manhwa Style</h3>
-      <img src="images/artwork6.jpg">
+    <div class="gallery-card" data-src="images/artwork6.jpg" data-label="Manhwa Style">
+      <img src="images/artwork6.jpg" alt="Manhwa Style artwork 3" loading="lazy">
+      <div class="gallery-label">Manhwa Style</div>
     </div>
+  </div>
+</section>
 
+<!-- WEBSITE GALLERY -->
+<section>
+  <h1>My Web Projects</h1>
+  <p class="section-sub">Tap any screenshot to enlarge · click or pinch to zoom</p>
+
+  <div class="gallery-grid">
+    <div class="gallery-card website-card" data-src="images/website1.jpg" data-label="Web Project 1">
+      <img src="images/website1.jpg" alt="Website project 1" loading="lazy">
+      <div class="gallery-label">Web Project 1</div>
+    </div>
+    <div class="gallery-card website-card" data-src="images/website2.jpg" data-label="Web Project 2">
+      <img src="images/website2.jpg" alt="Website project 2" loading="lazy">
+      <div class="gallery-label">Web Project 2</div>
+    </div>
+    <div class="gallery-card website-card" data-src="images/website3.jpg" data-label="Web Project 3">
+      <img src="images/website3.jpg" alt="Website project 3" loading="lazy">
+      <div class="gallery-label">Web Project 3</div>
+    </div>
   </div>
 </section>
 
@@ -88,6 +101,9 @@
   </div>
 </footer>
 
+</div>
+
 <script src="theme.js"></script>
+
 </body>
 </html>
