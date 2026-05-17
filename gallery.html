@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gallery of Jrei's digital artwork and web projects.">
+  <title>Gallery | Jrei</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">JREI</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <button id="themeToggle" aria-label="Toggle light/dark mode">☀️</button>
+</nav>
+
+<!-- HERO -->
+<div class="gallery-page-hero page">
+  <p class="section-label fade-in">Creative Portfolio</p>
+  <h1 class="section-title fade-in">Gallery</h1>
+  <p class="section-sub fade-in">Click any piece to view full size · Use filters to browse by category.</p>
+
+  <!-- FILTERS -->
+  <div class="gallery-filter fade-in">
+    <button class="filter-btn active" data-filter="all">All Work</button>
+    <button class="filter-btn" data-filter="semi-realism">Semi Realism</button>
+    <button class="filter-btn" data-filter="manhwa">Manhwa Style</button>
+    <button class="filter-btn" data-filter="web">Web Projects</button>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ARTWORK SECTION -->
+<section id="artwork-section" style="padding-top: 64px;">
+  <p class="section-label fade-in">Digital Illustration</p>
+  <h2 class="section-title fade-in" style="margin-bottom:40px;">Artwork <em>Gallery</em></h2>
+
+  <div class="gallery-masonry" id="artworkGrid">
+    <div class="gallery-card fade-in" data-src="images/artwork1.jpg" data-label="Semi Realism · 01" data-category="semi-realism">
+      <img src="images/artwork1.jpg" alt="Semi Realism artwork 1" loading="lazy">
+      <div class="gallery-label">Semi Realism · 01</div>
+    </div>
+    <div class="gallery-card fade-in" data-src="images/artwork2.jpg" data-label="Semi Realism · 02" data-category="semi-realism">
+      <img src="images/artwork2.jpg" alt="Semi Realism artwork 2" loading="lazy">
+      <div class="gallery-label">Semi Realism · 02</div>
+    </div>
+    <div class="gallery-card fade-in" data-src="images/artwork3.jpg" data-label="Semi Realism · 03" data-category="semi-realism">
+      <img src="images/artwork3.jpg" alt="Semi Realism artwork 3" loading="lazy">
+      <div class="gallery-label">Semi Realism · 03</div>
+    </div>
+    <div class="gallery-card fade-in" data-src="images/artwork4.jpg" data-label="Manhwa Style · 01" data-category="manhwa">
+      <img src="images/artwork4.jpg" alt="Manhwa Style artwork 1" loading="lazy">
+      <div class="gallery-label">Manhwa Style · 01</div>
+    </div>
+    <div class="gallery-card fade-in" data-src="images/artwork5.jpg" data-label="Manhwa Style · 02" data-category="manhwa">
+      <img src="images/artwork5.jpg" alt="Manhwa Style artwork 2" loading="lazy">
+      <div class="gallery-label">Manhwa Style · 02</div>
+    </div>
+    <div class="gallery-card fade-in" data-src="images/artwork6.jpg" data-label="Manhwa Style · 03" data-category="manhwa">
+      <img src="images/artwork6.jpg" alt="Manhwa Style artwork 3" loading="lazy">
+      <div class="gallery-label">Manhwa Style · 03</div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" style="margin-top:80px;">
+
+<!-- WEB PROJECTS SECTION -->
+<section id="web-section">
+  <p class="section-label fade-in">Development Work</p>
+  <h2 class="section-title fade-in" style="margin-bottom:40px;">
+    Website <em>Gallery</em>
+  </h2>
+
+  <div class="gallery-masonry" id="webGrid">
+
+    <div class="gallery-card fade-in"
+      data-src="images/to-do.png"
+      data-label="Web Project · 01"
+      data-category="web"
+      style="aspect-ratio:16/10;">
+
+      <img src="images/to-do.png" alt="Website project 1" loading="lazy">
+      <div class="gallery-label">Web Project · 01</div>
+    </div>
+
+    <div class="gallery-card fade-in"
+      data-src="images/Personal Portfolio.png"
+      data-label="Web Project · 02"
+      data-category="web"
+      style="aspect-ratio:16/10;">
+
+      <img src="images/Personal Portfolio.png" alt="Website project 2" loading="lazy">
+      <div class="gallery-label">Web Project · 02</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- MODAL -->
+<div id="imageModal" class="modal">
+  <div class="modal-inner">
+    <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+
+    <img class="modal-content" id="zoomedImage" alt="Zoomed Project">
+
+    <p class="modal-caption" id="modalCaption"></p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-logo">JREI</div>
+    <p class="footer-desc">Building clean, modern web experiences.</p>
+  </div>
+  <p class="footer-copy">© 2026 JREI. All rights reserved.</p>
+</footer>
+
+<script src="theme.js"></script>
+<script>
+  /* Filter logic */
+  const filterBtns = document.querySelectorAll(".filter-btn");
+  const artworkSection = document.getElementById("artwork-section");
+  const webSection = document.getElementById("web-section");
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      filterBtns.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      const f = btn.dataset.filter;
+
+      document.querySelectorAll(".gallery-card").forEach(card => {
+        const cat = card.dataset.category;
+        const show = f === "all" || cat === f;
+        card.style.display = show ? "" : "none";
+      });
+
+      // Show/hide section headers
+      if (f === "web") {
+        artworkSection.style.display = "none";
+        webSection.style.display = "";
+      } else if (f === "semi-realism" || f === "manhwa") {
+        artworkSection.style.display = "";
+        webSection.style.display = "none";
+      } else {
+        artworkSection.style.display = "";
+        webSection.style.display = "";
+      }
+    });
+  });
+</script>
+</body>
+</html>

@@ -9,142 +9,181 @@
 </head>
 <body>
 
+<!-- NAV -->
 <nav>
-  <b>JREI</b>
-  <div>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="Services.html">Services</a>
-    <a href="contact.html">Contact</a>
-  </div>
+  <span class="nav-logo">JREI</span>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
   <button id="themeToggle" aria-label="Toggle light/dark mode">☀️</button>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-
-  <!-- hero background image -->
   <div class="hero-bg" aria-hidden="true">
     <img src="images/hero-bg.jpg" alt="">
   </div>
-
-  <h1>Hello, I'm <span>Jrei</span></h1>
-  <p>
-    A Computer Science student with experience in digital art commissions and
-    part-time event coordination. I combine creativity and technical thinking
-    in everything I do.
-  </p>
-  <div>
-    <a class="btn" href="contact.html">Hire Me</a>
-    <a class="btn" href="Services.html">My Services</a>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Portfolio · 2026</p>
+    <h1>Hello,<br>I'm <em>Jrei</em></h1>
+    <p class="hero-desc">
+      A Computer Science student blending technical expertise with creative vision — building websites and digital art for businesses and individuals.
+    </p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="contact.html">Hire Me</a>
+      <a class="btn btn-outline" href="services.html">View Services</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span class="hero-scroll-line"></span>
+    Scroll to explore
   </div>
 </section>
+
+<hr class="divider">
 
 <!-- WHY WORK WITH ME -->
 <section>
-  <div class="card">
-    <h1>Why Work With Me?</h1>
-    <p>
-      I combine technical skills and creativity as a Computer Science student,
-      digital artist, and part-time event coordinator. I'm reliable, organized,
-      and focused on delivering quality work on time with clear communication.
-    </p>
+  <div class="why-layout">
+    <div class="why-text">
+      <p class="section-label fade-in">Why Choose Me</p>
+      <h2 class="section-title fade-in">Creative meets <em>technical</em></h2>
+      <p class="fade-in">
+        I'm a Computer Science student who combines technical skills with genuine creativity. Every project I take on gets my full attention — from clean code to thoughtful design decisions.
+      </p>
+      <p class="fade-in">
+        Reliable, organized, and deadline-driven with a focus on clear communication and quality output.
+      </p>
+      <div class="stat-row fade-in">
+        <div class="stat-item">
+          <div class="stat-num">6+</div>
+          <div class="stat-label">Artworks</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">3+</div>
+          <div class="stat-label">Web Projects</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">1st</div>
+          <div class="stat-label">Digital Art Award</div>
+        </div>
+      </div>
+    </div>
+    <div class="why-image fade-in">
+      <img src="images/profile.jpg" alt="Jrei working">
+    </div>
   </div>
 </section>
+
+<hr class="divider">
 
 <!-- SKILLS -->
-<section>
-  <h1>My Skills</h1>
-  <div class="card">
-    <h3>Web Development</h3>
-    <p>Responsive websites using HTML, CSS, JavaScript, and Python.</p>
-  </div>
-  <div class="card">
-    <h3>UI / UX Design</h3>
-    <p>Simple and aesthetic layouts for modern users.</p>
-  </div>
-  <div class="card">
-    <h3>Digital Art</h3>
-    <p>Creative graphics, branding visuals, and custom art.</p>
+<section class="skills-section">
+  <p class="section-label fade-in">What I Offer</p>
+  <h2 class="section-title fade-in">My <em>Skills</em></h2>
+  <p class="section-sub fade-in">A combination of technical and creative capabilities.</p>
+
+  <div class="grid-3">
+    <div class="card fade-in">
+      <div class="card-icon">⌨️</div>
+      <h3>Web Development</h3>
+      <p>Responsive, modern websites using HTML, CSS, JavaScript, and Python. Built to perform on every device.</p>
+    </div>
+    <div class="card fade-in">
+      <div class="card-icon">✦</div>
+      <h3>UI / UX Design</h3>
+      <p>Clean, intuitive layouts crafted with the user in mind. Simple aesthetics that communicate clearly.</p>
+    </div>
+    <div class="card fade-in">
+      <div class="card-icon">🎨</div>
+      <h3>Digital Art</h3>
+      <p>Custom commissions, branding visuals, and illustrations — semi-realism, manhwa, and beyond.</p>
+    </div>
   </div>
 </section>
 
-<!-- CTA -->
-<section>
-  <div class="card">
-    <h1>Let's Build Something Great</h1>
-    <p>Need a website or creative digital help? Let's work together.</p>
-    <a class="btn" href="contact.html">Contact Me</a>
-  </div>
-</section>
+<hr class="divider">
 
-<!-- GALLERY -->
+<!-- ARTWORK PREVIEW -->
 <section>
-  <h1>My Artwork</h1>
-  <p class="section-sub">Tap any piece to enlarge · click or pinch again to zoom</p>
+  <p class="section-label fade-in">Creative Work</p>
+  <h2 class="section-title fade-in">Artwork <em>Gallery</em></h2>
+  <p class="section-sub fade-in">A selection of my digital art — click any piece to enlarge.</p>
 
   <div class="gallery-grid">
-    <div class="gallery-card upper-item" data-src="images/artwork1.jpg" data-label="Semi Realism">
+    <div class="gallery-card fade-in" data-src="images/artwork1.jpg" data-label="Semi Realism">
       <img src="images/artwork1.jpg" alt="Semi Realism artwork 1" loading="lazy">
       <div class="gallery-label">Semi Realism</div>
     </div>
-    <div class="gallery-card upper-item" data-src="images/artwork2.jpg" data-label="Semi Realism">
+    <div class="gallery-card fade-in" data-src="images/artwork2.jpg" data-label="Semi Realism">
       <img src="images/artwork2.jpg" alt="Semi Realism artwork 2" loading="lazy">
       <div class="gallery-label">Semi Realism</div>
     </div>
-    <div class="gallery-card upper-item" data-src="images/artwork3.jpg" data-label="Semi Realism">
+    <div class="gallery-card fade-in" data-src="images/artwork3.jpg" data-label="Semi Realism">
       <img src="images/artwork3.jpg" alt="Semi Realism artwork 3" loading="lazy">
       <div class="gallery-label">Semi Realism</div>
     </div>
-    <div class="gallery-card bottom-item" data-src="images/artwork4.jpg" data-label="Manhwa Style">
+    <div class="gallery-card fade-in" data-src="images/artwork4.jpg" data-label="Manhwa Style">
       <img src="images/artwork4.jpg" alt="Manhwa Style artwork 1" loading="lazy">
       <div class="gallery-label">Manhwa Style</div>
     </div>
-    <div class="gallery-card bottom-item" data-src="images/artwork5.jpg" data-label="Manhwa Style">
+    <div class="gallery-card fade-in" data-src="images/artwork5.jpg" data-label="Manhwa Style">
       <img src="images/artwork5.jpg" alt="Manhwa Style artwork 2" loading="lazy">
       <div class="gallery-label">Manhwa Style</div>
     </div>
-    <div class="gallery-card bottom-item" data-src="images/artwork6.jpg" data-label="Manhwa Style">
+    <div class="gallery-card fade-in" data-src="images/artwork6.jpg" data-label="Manhwa Style">
       <img src="images/artwork6.jpg" alt="Manhwa Style artwork 3" loading="lazy">
       <div class="gallery-label">Manhwa Style</div>
     </div>
   </div>
 
-  <div id="imageModal" class="modal">
-  <img class="modal-content" id="zoomedImage">
-</div>
-
+  <div class="gallery-cta fade-in">
+    <a href="gallery.html" class="btn btn-outline">Open Full Gallery →</a>
+  </div>
 </section>
 
-<footer class="footer">
-  <div class="footer-content">
-    <h3>JREI Portfolio</h3>
-    <p>Building clean, modern web projects.</p>
-    <p class="footer-bottom">© 2026 JREI. All rights reserved.</p>
+<hr class="divider">
+
+<!-- CTA -->
+<section style="text-align:center; padding: 100px 10vw;">
+  <p class="section-label fade-in" style="text-align:center;">Ready to start?</p>
+  <h2 class="section-title fade-in" style="text-align:center; max-width:500px; margin:0 auto 16px;">Let's build something <em>great</em></h2>
+  <p class="section-sub fade-in" style="max-width:380px; margin:0 auto 40px;">Have a project in mind? I'm available for web development, digital art commissions, and freelance work.</p>
+  <div class="fade-in" style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+    <a class="btn btn-primary" href="contact.html">Contact Me</a>
+    <a class="btn btn-outline" href="about.html">Learn More</a>
   </div>
+</section>
+
+<!-- MODAL -->
+<div id="imageModal" class="modal">
+  <div class="modal-inner">
+    <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+    <img class="modal-content" id="zoomedImage" alt="">
+    <p class="modal-caption" id="modalCaption"></p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-logo">JREI</div>
+    <p class="footer-desc">Building clean, modern web experiences.</p>
+  </div>
+  <nav style="background:none;position:static;height:auto;padding:0;border:none;backdrop-filter:none;">
+    <ul class="nav-links" style="list-style:none;">
+      <li><a href="index.html" style="font-size:13px; color:var(--muted);">Home</a></li>
+      <li><a href="about.html" style="font-size:13px; color:var(--muted);">About</a></li>
+      <li><a href="services.html" style="font-size:13px; color:var(--muted);">Services</a></li>
+      <li><a href="contact.html" style="font-size:13px; color:var(--muted);">Contact</a></li>
+    </ul>
+  </nav>
+  <p class="footer-copy">© 2026 JREI. All rights reserved.</p>
 </footer>
 
 <script src="theme.js"></script>
-
-<script>
-const modal = document.getElementById("imageModal");
-const modalImg = document.getElementById("zoomedImage");
-
-document.querySelectorAll(".gallery-card").forEach(card => {
-  card.addEventListener("click", function () {
-    modal.style.display = "flex";
-    modalImg.src = this.getAttribute("data-src");
-    document.body.classList.add("no-scroll");
-  });
-});
-
-modal.addEventListener("click", function (e) {
-  if (e.target === modal) {
-    modal.style.display = "none";
-    document.body.classList.remove("no-scroll");
-  }
-});
-</script>
-
 </body>
 </html>

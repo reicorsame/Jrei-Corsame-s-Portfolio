@@ -9,131 +9,118 @@
 </head>
 <body>
 
+<!-- NAV -->
 <nav>
-  <b>JREI</b>
-  <div>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="Services.html">Services</a>
-    <a href="contact.html">Contact</a>
-  </div>
+  <a href="index.html" class="nav-logo">JREI</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
   <button id="themeToggle" aria-label="Toggle light/dark mode">☀️</button>
 </nav>
 
-<!-- PROFILE -->
-<section>
-  <img src="images/profile.jpg" class="profile-pic" alt="Photo of Jrei">
-
-  <h1>About Me</h1>
-  <div class="card">
-    <p>
-      Hi! I'm Jrei, a Computer Science student passionate about web development,
-      digital art, and creative design. I enjoy building clean and modern websites
-      that are simple but visually appealing.
+<!-- ABOUT HERO -->
+<div class="about-hero page">
+  <div class="profile-pic-wrap fade-in">
+    <img src="images/profile.jpg" alt="Photo of Jrei" class="profile-pic">
+  </div>
+  <div class="about-bio">
+    <p class="section-label fade-in">About Me</p>
+    <h1 class="fade-in">Jrei <em style="font-style:normal; font-weight:700; color:var(--accent); font-family:var(--font-display);">Corsame</em></h1>
+    <p class="role fade-in">CS Student · Digital Artist · Freelancer</p>
+    <p class="fade-in">
+      Hi! I'm Jrei — a Computer Science student with a passion for web development, digital art, and creative problem-solving. I enjoy building clean, modern websites that are simple yet visually compelling.
     </p>
+    <p class="fade-in">
+      Beyond code, I work as a digital artist taking commissions, and I've coordinated school events and organized projects that require both creativity and structure.
+    </p>
+    <ul class="skills-list">
+      <li class="fade-in">HTML · CSS · JS</li>
+      <li class="fade-in">Python</li>
+      <li class="fade-in">Digital Art</li>
+      <li class="fade-in">UI Design</li>
+      <li class="fade-in">Event Coordination</li>
+      <li class="fade-in">Freelancing</li>
+    </ul>
   </div>
+</div>
 
-  <h1>What I Do</h1>
-  <div class="card">
-    <p>• Web Development (HTML, CSS, JavaScript, and Python)</p>
-    <p>• Digital Art &amp; Design</p>
-    <p>• UI Layout Design</p>
-    <p>• On-call coordination and organization tasks</p>
-  </div>
-</section>
+<hr class="divider">
 
-<!-- ACHIEVEMENTS -->
+<!-- EXPERIENCE TIMELINE -->
 <section>
-  <h1>My Achievements / Experience</h1>
-  <div class="grid">
+  <p class="section-label fade-in">Experience</p>
+  <h2 class="section-title fade-in">My <em>Journey</em></h2>
+  <p class="section-sub fade-in">Academic milestones and real-world experience.</p>
 
-    <div class="card">
-      <h3>Grade 11</h3>
-      <p>• Senior High School (ICT Track)</p>
-      <p>• With Honor — 1st &amp; 2nd Semesters</p>
-      <p>• Joined school tech-related activities</p>
-      <p>• Event Coordination for school events</p>
-      <p>• 1st Place in Digital Art Contest</p>
+  <div class="timeline">
+    <div class="timeline-item fade-in">
+      <div class="timeline-dot"></div>
+      <p class="timeline-year">Grade 11 · ICT Track</p>
+      <h3>Senior High School</h3>
+      <ul>
+        <li>With Honor — 1st &amp; 2nd Semesters</li>
+        <li>Joined school tech-related activities</li>
+        <li>Event Coordination for school events</li>
+        <li>1st Place — Digital Art Contest</li>
+      </ul>
     </div>
 
-    <div class="card">
-      <h3>Grade 12</h3>
-      <p>• Completed Senior High School</p>
-      <p>• With Highest Honor — 1st &amp; 2nd Semesters</p>
-      <p>• Created personal mini-projects (portfolio &amp; designs)</p>
-      <p>• Became Event Coordinator for school events</p>
+    <div class="timeline-item fade-in">
+      <div class="timeline-dot"></div>
+      <p class="timeline-year">Grade 12</p>
+      <h3>Completed Senior High School</h3>
+      <ul>
+        <li>With Highest Honor — 1st &amp; 2nd Semesters</li>
+        <li>Created personal mini-projects (portfolio &amp; designs)</li>
+        <li>Became Lead Event Coordinator for school events</li>
+      </ul>
     </div>
 
-    <div class="card">
-      <h3>1st Year College</h3>
-      <p>• Expanding knowledge of HTML, CSS, JavaScript, and Python</p>
-      <p>• Capstone Project: Prototype Arduino RFID Door Lock</p>
-      <p>• Building personal portfolio projects</p>
+    <div class="timeline-item fade-in">
+      <div class="timeline-dot"></div>
+      <p class="timeline-year">1st Year College · Present</p>
+      <h3>Computer Science Student</h3>
+      <ul>
+        <li>Expanding knowledge of HTML, CSS, JavaScript, and Python</li>
+        <li>Capstone Project: Prototype Arduino RFID Door Lock</li>
+        <li>Building personal portfolio projects</li>
+        <li>Freelance web development and digital art commissions</li>
+      </ul>
     </div>
-
   </div>
 </section>
+
+<hr class="divider">
 
 <!-- RESUME -->
 <section>
-<h1 text align="center">My Resume</h1>
-<p class="section-sub" text align="center">Click the image to view</p>
+  <p class="section-label fade-in" style="text-align:center;">Document</p>
+  <h2 class="section-title fade-in" style="text-align:center;">My <em>Résumé</em></h2>
+  <p class="section-sub fade-in" style="text-align:center;">Download a copy below.</p>
 
+  <div class="resume-wrap">
+    <div class="resume-preview fade-in" style="cursor:default;">
+      <img src="images/resume.jpg" alt="Jrei's Resume Preview">
+    </div>
 
-<div class="resume-section">
-
-<img src="images/resume.jpg" alt="Resume Preview" class="resume-image" id="resumePreview">
-
-<br><br>
-
-<a href="resume.pdf" download class="download-btn">
-Download Resume
-</a>
-
-</div>
-
-<div id="imageModal" class="modal">
-  <img class="modal-content" id="zoomedImage">
-</div>
-
+    <a href="resume.pdf" download class="btn btn-primary fade-in">
+      ↓ Download Résumé (PDF)
+    </a>
+  </div>
 </section>
 
-<footer class="footer">
-  <div class="footer-content">
-    <h3>JREI Portfolio</h3>
-    <p>Building clean, modern web projects.</p>
-    <p class="footer-bottom">© 2026 JREI. All rights reserved.</p>
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-logo">JREI</div>
+    <p class="footer-desc">Building clean, modern web experiences.</p>
   </div>
+  <p class="footer-copy">© 2026 JREI. All rights reserved.</p>
 </footer>
 
 <script src="theme.js"></script>
-
-<script>
-
-const modal = document.getElementById("imageModal");
-const img = document.getElementById("resumePreview");
-const modalImg = document.getElementById("zoomedImage");
-
-window.onload = function () {
-  modal.style.display = "none";
-  document.body.classList.remove("no-scroll");
-}
-  
-
-img.onclick = function () {
-  modal.style.display = "flex";
-  modalImg.src = this.src;
-  document.body.classList.add("no-scroll");
-}
-
-modal.onclick = function (e) {
-  if (e.target === modal) {
-    modal.style.display = "none";
-    document.body.classList.remove("no-scroll");
-  }
-}
-
-</script>
-
 </body>
 </html>

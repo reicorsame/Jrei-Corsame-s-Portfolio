@@ -9,69 +9,154 @@
 </head>
 <body>
 
+<!-- NAV -->
 <nav>
-  <b>JREI</b>
-  <div>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="Services.html">Services</a>
-    <a href="contact.html">Contact</a>
-  </div>
+  <a href="index.html" class="nav-logo">JREI</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
   <button id="themeToggle" aria-label="Toggle light/dark mode">☀️</button>
 </nav>
 
-<section>
-  <div class="contact-container">
+<!-- HERO -->
+<div class="contact-hero page">
+  <p class="section-label fade-in">Get In Touch</p>
+  <h1 class="section-title fade-in">Let's <em>Connect</em></h1>
+  <p class="section-sub fade-in" style="max-width:420px; margin:0 auto;">Have a project in mind or want to commission some art? I'd love to hear from you.</p>
+</div>
 
-    <div>
-      <h1>My Accounts</h1>
+<hr class="divider">
 
-      <div class="card">
-        <h3>Gmail</h3>
-        <p>jcorsame2025@student.nbscollege.edu.ph</p>
-      </div>
+<!-- CONTACT LAYOUT -->
+<div class="contact-layout">
 
-      <div class="card">
-        <h3>Facebook</h3>
-        <p>Jrei Corsame</p>
-      </div>
+  <!-- Left: Info -->
+  <div class="fade-in">
+    <p class="section-label" style="margin-bottom:32px;">My Accounts</p>
 
-      <div class="card">
-        <h3>Instagram</h3>
-        <p>@reiisxyst</p>
+    <div class="contact-info-item">
+      <div class="contact-info-icon">✉</div>
+      <div>
+        <p class="contact-info-label">Email</p>
+        <a href="mailto:jcorsame2025@student.nbscollege.edu.ph" class="contact-info-value contact-link">jcorsame2025@student.nbscollege.edu.ph</a>
       </div>
     </div>
 
-    <div>
-      <h1>Send a Message</h1>
-
-      <form id="contactForm" action="https://formspree.io/f/mgorqpbw" method="POST">
-        <input type="text"  name="name"    placeholder="Name"    required>
-        <input type="email" name="email"   placeholder="Email"   required>
-        <textarea           name="message" placeholder="Message" rows="6" required></textarea>
-        <button type="submit">Send</button>
-      </form>
+    <div class="contact-info-item">
+      <div class="contact-info-icon">in</div>
+      <div>
+        <p class="contact-info-label">LinkedIn</p>
+        <a href="https://www.linkedin.com/in/jrei-corsame-bb99863b8/" target="_blank" rel="noopener" class="contact-info-value contact-link">Jrei Corsame</a>
+      </div>
     </div>
 
-  </div>
-</section>
+    <div class="contact-info-item">
+      <div class="contact-info-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+      </div>
+      <div>
+        <p class="contact-info-label">GitHub</p>
+        <a href="https://github.com/" target="_blank" rel="noopener" class="contact-info-value contact-link">github.com/jrei</a>
+      </div>
+    </div>
 
-<footer class="footer">
-  <div class="footer-content">
-    <h3>JREI Portfolio</h3>
-    <p>Building clean, modern web projects.</p>
-    <p class="footer-bottom">© 2026 JREI. All rights reserved.</p>
+    <div style="margin-top:48px;">
+      <p class="section-label" style="margin-bottom:20px;">Availability</p>
+      <p style="color:var(--muted); font-size:14px; line-height:1.8;">
+        Available for web development projects, digital art commissions, and freelance work. Typical response time: within 24 hours.
+      </p>
+    </div>
   </div>
+
+  <!-- Right: Form -->
+  <div class="fade-in">
+    <p class="section-label" style="margin-bottom:32px;">Send a Message</p>
+
+    <form id="contactForm" class="contact-form" action="https://formspree.io/f/mgorqpbw" method="POST">
+
+      <div class="form-group">
+        <label class="form-label" for="name">Full Name</label>
+        <input class="form-input" type="text" id="name" name="name" placeholder="Your name" required autocomplete="name">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="email">Email Address</label>
+        <input class="form-input" type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="subject">Subject</label>
+        <input class="form-input" type="text" id="subject" name="subject" placeholder="Web project / Art commission / Other">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="message">Message</label>
+        <textarea class="form-textarea" id="message" name="message" placeholder="Tell me about your project or commission..." rows="6" required></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
+        Send Message →
+      </button>
+
+    </form>
+
+    <div id="formSuccess" class="form-success">
+      ✓ Message sent! I'll get back to you within 24 hours.
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-logo">JREI</div>
+    <p class="footer-desc">Building clean, modern web experiences.</p>
+  </div>
+  <p class="footer-copy">© 2026 JREI. All rights reserved.</p>
 </footer>
 
 <script src="theme.js"></script>
 <script>
-  document.getElementById("contactForm").addEventListener("submit", function () {
-    setTimeout(() => this.reset(), 100);
+document.addEventListener("DOMContentLoaded", () => {
+
+  const form = document.getElementById("contactForm");
+  const successMsg = document.getElementById("formSuccess");
+
+  if (!form || !successMsg) {
+    console.error("Missing form or success message element");
+    return;
+  }
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    try {
+      await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      successMsg.classList.add("show");
+      form.reset();
+
+      setTimeout(() => {
+        successMsg.classList.remove("show");
+      }, 3000);
+
+    } catch (error) {
+      alert("Oops! Something went wrong.");
+      console.error(error);
+    }
   });
+
+});
 </script>
-
-<script src="theme.js"></script>
-
 </body>
 </html>
